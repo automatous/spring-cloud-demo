@@ -1,0 +1,19 @@
+server:
+  port: 7777
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://yanqun:10001/eureka,http://yanqun2:10002/eureka,http://yanqun3:10003/eureka
+
+
+#spring:
+#  cloud:
+#    loadbalancer:
+#      ribbon:
+#        enabled: true
+#
+#ribbon:
+#  restclient:
+#    enabled: true

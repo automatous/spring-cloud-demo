@@ -1,0 +1,41 @@
+server:
+  port: 10001
+
+logging:
+  level:
+    com:
+      example:
+        demo: debug
+
+
+# 单个eureka
+eureka:
+  instance:
+    hostname: yanqun
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+
+# 集群eureka
+#eureka:
+#  instance:
+#    hostname: yanqun
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://yanqun2:10002/eureka,http://yanqun3:10003/eureka
+
+
+spring:
+  zipkin:
+    base-url: http://127.0.0.1:9411/ # zipkin server的请求地址
+    discoveryClientEnabled: false # 让nacos把它当成一个URL， 而不要当做服务名
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0 #采样的百分比

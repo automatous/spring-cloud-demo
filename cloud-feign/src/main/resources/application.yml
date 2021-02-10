@@ -1,0 +1,12 @@
+server:
+  port: 7788
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://yanqun:10001/eureka,http://yanqun2:10002/eureka,http://yanqun3:10003/eureka
+
+feign:
+  circuitbreaker:
+    enabled: true

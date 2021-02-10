@@ -1,0 +1,43 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    com:
+      example:
+        demo: debug
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+
+spring:
+  application:
+    name: cloud-provider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.8.131:3306/cloud
+    username: root
+    password: 1234
+# 错误原因是EurekaClientConfigBean不能接收service-url这种带‘-’的属性，改成驼峰命名就可以了(坑!)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://yanqun:10001/eureka,http://yanqun2:10002/eureka,http://yanqun3:10003/eureka
+  instance:
+    instanceId: YanqunCloudProvider
+
+info:
+  author: yanqun
+  project.groupId: $project.groupId
+  project.artifactId: $project.artifactId
+  project.verson: $project.version
+  eureka.client.serviceUrl.deaultZone: ${eureka.client.serviceUrl.defaultZone}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'

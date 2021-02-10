@@ -1,0 +1,17 @@
+server:
+  port: 10002
+
+logging:
+  level:
+    com:
+      example:
+        demo: debug
+
+eureka:
+  instance:
+    hostname: yanqun2
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://yanqun:10001/eureka,http://yanqun3:10003/eureka
