@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 20202
 
 spring:
   application:
-    name: cloud-sleuth-hi
+    name: cloud-zuul
   zipkin:
     base-url: http://127.0.0.1:9411/ # zipkin server的请求地址
     discoveryClientEnabled: false # 让nacos把它当成一个URL， 而不要当做服务名
@@ -12,6 +12,10 @@ spring:
   sleuth:
     sampler:
       probability: 1.0 #采样的百分比
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 logging:
   level:
@@ -24,4 +28,5 @@ eureka:
     serviceUrl:
       defaultZone: http://yanqun:10001/eureka
   instance:
-    instanceId: CloudSleuthHi
+    instanceId: CloudZuul
+    appname: cloud-zuul
