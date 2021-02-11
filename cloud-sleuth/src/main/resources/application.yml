@@ -24,4 +24,4 @@ eureka:
     serviceUrl:
       defaultZone: http://yanqun:10001/eureka
   instance:
-    instanceId: CloudSleuthHi
+    instanceId: cloudSleuthHi
