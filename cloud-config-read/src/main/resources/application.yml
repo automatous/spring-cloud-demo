@@ -1,2 +1,24 @@
 # 因为zuul版本不一样, 导致读不到文件, 故在此新开一个服务。。。。
 # 这个版本问题真的可以吐死了！！！！
+#server:
+#  port: 20020
+#
+#spring:
+#  application:
+#    name: cloud-config-read
+#  rabbitmq:
+#    host: 192.168.8.131
+#
+#logging:
+#  level:
+#    com:
+#      example:
+#        demo: debug
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
+#
+#stuname: a!

@@ -1,5 +1,5 @@
 # 将application.yml的注释掉, 读配置中心的配置
-# 版本问题, 这里作废!!!!
+# 版本问题, 这里作废!!!! 对应类似实践转移到cloud-config/cloud-config-read
 spring:
   cloud:
     config:
