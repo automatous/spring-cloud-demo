@@ -21,6 +21,8 @@
         <module>cloud-sleuth</module>
         <module>cloud-zipkin</module>
         <module>cloud-zuul</module>
+        <module>cloud-config</module>
+        <module>cloud-config-read</module>
     </modules>
     <packaging>pom</packaging>
 

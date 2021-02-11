@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cloud-config-read
+  cloud:
+    config:
+      uri: http://localhost:10010
+      profile: dev
+      name: read
+      label: master

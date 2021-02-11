@@ -1,0 +1,9 @@
+# 将application.yml的注释掉, 读配置中心的配置
+# 版本问题, 这里作废!!!!
+spring:
+  cloud:
+    config:
+      name: zuul
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:10010
