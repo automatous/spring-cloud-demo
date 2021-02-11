@@ -25,3 +25,11 @@ eureka:
       defaultZone: http://yanqun:10001/eureka
   instance:
     instanceId: CloudZuul
+
+zuul:
+  prefix: /api
+  ignored-services: '*'
+#  ignored-services: cloud-sleuth-hi
+  routes:
+    cloud-sleuth-hi:
+      path: /zuulProxy/**
